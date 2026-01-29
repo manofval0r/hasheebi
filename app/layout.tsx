@@ -21,8 +21,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hashebi Global Services - Leading Construction Firm in Nigeria",
-    template: "%s | Hashebi Global Services"
+    default: "HASHEBI GLOBAL SERVICES - Leading Construction Firm in Nigeria",
+    template: "%s | HASHEBI GLOBAL SERVICES"
   },
   description: "Hashebi Global Services Nigeria Ltd is a premier construction and civil engineering firm specializing in high-fidelity residential, commercial, and industrial projects with structural integrity.",
   keywords: ["construction nigeria", "civil engineering warri", "building contractors delta", "hashebi global", "nigerian construction firm"],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "https://hashebi.com.ng",
-    siteName: "Hashebi Global Services",
-    title: "Hashebi Global Services - Excellence in Construction",
+    siteName: "HASHEBI GLOBAL SERVICES",
+    title: "HASHEBI GLOBAL SERVICES - Excellence in Construction",
     description: "Building Nigeria's future with precision and integrity. Discover our portfolio of landmark projects.",
     images: [
       {
@@ -45,9 +45,32 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hashebi Global Services",
+    title: "HASHEBI GLOBAL SERVICES",
     description: "Nigeria's most reliable construction and engineering partner.",
     images: ["/images/WhatsApp Image 2026-01-29 at 4.18.54 PM.jpeg"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
+    other: [
+      {
+        rel: "manifest",
+        url: "/site.webmanifest",
+      },
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+    ],
   },
 };
 
