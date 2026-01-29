@@ -28,7 +28,8 @@ export function WhyChooseUs() {
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ amount: 0.5, once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="space-y-10"
                     >
                         <div>
@@ -72,8 +73,9 @@ export function WhyChooseUs() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="relative z-10 rounded-3xl overflow-hidden shadow-2xl"
+                            viewport={{ amount: 0.5, once: true }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="relative z-10 rounded-sm overflow-hidden professional-shadow"
                         >
                             <Image
                                 src="/images/WhatsApp Image 2026-01-29 at 4.18.57 PM (1).jpeg"
@@ -95,10 +97,10 @@ export function WhyChooseUs() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
-                            className="absolute -bottom-8 -right-8 bg-brand-dark p-8 rounded-2xl shadow-3xl z-20"
+                            className="absolute -bottom-8 -right-8 bg-brand-dark p-8 rounded-sm shadow-3xl z-20 border-l-4 border-l-brand-gold"
                         >
                             <div className="text-brand-gold text-5xl font-display font-black leading-none mb-2">17+</div>
-                            <div className="text-white text-sm font-bold uppercase tracking-widest">Years of <br />Excellence</div>
+                            <div className="text-white text-[10px] font-black uppercase tracking-[0.2em]">Years of <br />Excellence</div>
                         </motion.div>
                     </div>
                 </div>

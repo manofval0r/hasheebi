@@ -10,8 +10,8 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     ({ className, variant = "default", hoverable = true, children, ...props }, ref) => {
         const variants = {
             default: "bg-white",
-            elevated: "bg-white shadow-lg",
-            bordered: "bg-white border border-gray-200",
+            elevated: "bg-white professional-shadow",
+            bordered: "bg-white border border-gray-100",
             glass: "glass-card",
         };
 
@@ -19,9 +19,9 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
             <div
                 ref={ref}
                 className={cn(
-                    "rounded-xl overflow-hidden transition-all duration-300",
+                    "rounded-sm overflow-hidden transition-all duration-300",
                     variants[variant],
-                    hoverable && "hover:-translate-y-2 hover:shadow-2xl",
+                    hoverable && "hover:-translate-y-2 hover:professional-shadow-hover",
                     className
                 )}
                 {...props}

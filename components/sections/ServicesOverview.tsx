@@ -54,10 +54,10 @@ export function ServicesOverview() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-dark mb-6">
+                            <h2 className="text-4xl md:text-6xl font-display font-black text-brand-dark mb-6 tracking-tighter">
                                 Comprehensive <span className="text-brand-blue">Solutions</span>
                             </h2>
-                            <div className="h-1.5 w-32 bg-brand-blue diagonal-stripes" />
+                            <div className="h-1 w-24 bg-brand-blue" />
                         </motion.div>
                         <p className="mt-8 text-gray-600 text-lg font-headings leading-relaxed">
                             We offer a wide range of specialized services designed to meet the unique
@@ -66,7 +66,7 @@ export function ServicesOverview() {
                     </div>
                     <Link
                         href="/services"
-                        className="text-brand-dark font-bold uppercase tracking-widest flex items-center gap-2 hover:text-brand-gold transition-colors pb-2 border-b-2 border-brand-gold/20 hover:border-brand-gold"
+                        className="text-brand-dark font-black uppercase tracking-[0.2em] text-[10px] flex items-center gap-2 hover:text-brand-gold transition-colors pb-2 border-b-2 border-brand-gold/20 hover:border-brand-gold"
                     >
                         All Services <ArrowRight className="w-5 h-5" />
                     </Link>
@@ -78,8 +78,8 @@ export function ServicesOverview() {
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            viewport={{ amount: 0.5, once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                         >
                             <ServiceCard {...service} />
                         </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/Card";
+import { FloatingIcon } from "@/components/ui/FloatingIcon";
 import { ShieldCheck, Lightbulb, Handshake, HardHat } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -46,13 +47,14 @@ export function CoreValues() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ amount: 0.5, once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="inline-block"
                     >
-                        <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-dark mb-4">
+                        <h2 className="text-4xl md:text-6xl font-display font-black text-brand-dark mb-4 tracking-tighter">
                             Our Core <span className="text-brand-gold">Values</span>
                         </h2>
-                        <div className="h-1.5 w-24 bg-brand-gold mx-auto diagonal-stripes" />
+                        <div className="h-1 w-24 bg-brand-gold mx-auto" />
                     </motion.div>
                     <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg font-headings">
                         Defining our commitment to excellence and professional integrity in the construction industry.
@@ -65,14 +67,18 @@ export function CoreValues() {
                             key={value.title}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            viewport={{ amount: 0.5, once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                         >
-                            <Card variant="elevated" className="h-full p-8 group border-t-4 border-transparent hover:border-brand-gold">
-                                <div className={`${value.bg} ${value.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-6`}>
-                                    <value.icon className="w-8 h-8" />
+                            <Card variant="elevated" className="h-full p-10 group border-l-4 border-l-transparent hover:border-l-brand-gold transition-all duration-500 bg-white">
+                                <div className="mb-8">
+                                    <FloatingIcon
+                                        icon={value.icon}
+                                        variant={index % 2 === 0 ? "gold" : "blue"}
+                                        size="md"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
+                                <h3 className="text-xl font-display font-black text-brand-dark mb-4 group-hover:text-brand-gold transition-colors">
                                     {value.title}
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">

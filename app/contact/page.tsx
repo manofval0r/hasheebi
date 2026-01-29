@@ -234,15 +234,47 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Map Placeholder */}
-            <section className="h-[500px] w-full bg-gray-100 flex items-center justify-center relative group overflow-hidden">
-                <div className="absolute inset-0 diagonal-stripes opacity-20" />
-                <div className="relative z-10 text-center space-y-4">
-                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform">
-                        <MapPin className="w-10 h-10 text-brand-gold" />
+            {/* Our Offices Section */}
+            <section className="py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-display font-black text-brand-dark tracking-tighter">Our <span className="text-brand-gold">Offices</span></h2>
+                        <div className="h-1 w-24 bg-brand-gold mx-auto mt-4" />
                     </div>
-                    <h3 className="text-2xl font-display font-black text-brand-dark">3 Ekuredeurhoboroad, Warri</h3>
-                    <p className="text-gray-500 font-headings">Google Maps Integration Placeholder</p>
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        <Card variant="bordered" className="p-12 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 diagonal-stripes opacity-5 -mr-12 -mt-12 group-hover:opacity-10 transition-opacity" />
+                            <h3 className="text-2xl font-display font-black text-brand-dark mb-4">Corporate Headquarters</h3>
+                            <div className="space-y-4 font-headings">
+                                <p className="text-gray-600 font-medium">3 Ekuredeurhoboroad, Warri,<br />Delta State, Nigeria</p>
+                                <div className="pt-4 space-y-2">
+                                    <p className="text-sm font-bold text-brand-blue flex items-center gap-2">
+                                        <Phone className="w-4 h-4" /> Project Coordination
+                                    </p>
+                                    <p className="text-sm font-bold text-brand-gold flex items-center gap-2">
+                                        <Mail className="w-4 h-4" /> Administrative Dept.
+                                    </p>
+                                </div>
+                            </div>
+                        </Card>
+
+                        <Card variant="bordered" className="p-12 relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 diagonal-stripes opacity-5 -mr-12 -mt-12 group-hover:opacity-10 transition-opacity" />
+                            <h3 className="text-2xl font-display font-black text-brand-dark mb-4">Site Operations</h3>
+                            <div className="space-y-4 font-headings">
+                                <p className="text-gray-600 font-medium">Operational hubs active across major<br />project sites in the Niger Delta region.</p>
+                                <div className="pt-4 space-y-2">
+                                    <p className="text-sm font-bold text-brand-blue flex items-center gap-2">
+                                        <Clock className="w-4 h-4" /> On-site 24/7 Support
+                                    </p>
+                                    <p className="text-sm font-bold text-brand-gold flex items-center gap-2">
+                                        <MapPin className="w-4 h-4" /> Mobile Project Units
+                                    </p>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
                 </div>
             </section>
         </>

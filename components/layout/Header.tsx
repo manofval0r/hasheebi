@@ -120,12 +120,12 @@ export function Header() {
                             </div>
                         ))}
 
-                        {/* Quote Button */}
+                        {/* Contact Button */}
                         <Link
                             href="/contact"
                             className="ml-6 px-6 py-2.5 bg-brand-gold hover:bg-brand-blue text-white text-sm font-bold uppercase tracking-wider rounded-md transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
                         >
-                            Get a Quote
+                            Get In Touch
                         </Link>
                     </nav>
 

@@ -2,6 +2,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { CTASection } from "@/components/sections/CTASection";
 import { Target, Eye, Users } from "lucide-react";
 import Image from "next/image";
+import { Card } from "@/components/ui/Card";
 
 export default function AboutPage() {
     return (
@@ -95,30 +96,29 @@ export default function AboutPage() {
             <section className="py-24 bg-white" id="leadership">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-5xl font-display font-black text-brand-dark mb-6">Leadership <span className="text-brand-gold italic">Team</span></h2>
-                        <div className="h-1.5 w-24 bg-brand-gold mx-auto diagonal-stripes mb-8" />
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto font-headings">
+                        <h2 className="text-4xl md:text-6xl font-display font-black text-brand-dark mb-6 tracking-tighter">Leadership <span className="text-brand-gold">Team</span></h2>
+                        <div className="h-1 w-24 bg-brand-gold mx-auto mb-8" />
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto font-headings font-medium">
                             Guided by a group of dedicated professionals with decades of combined
-                            experience in the construction sector.
+                            experience in the Nigerian construction sector.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-12">
+                    <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { name: "Hammed Shola", title: "Director" },
-                            { name: "Hammed Ebiere", title: "Director" },
-                            { name: "Hammed Oluwatomisin", title: "Director" }
+                            { name: "Hammed Shola", title: "Managing Director", focus: "Strategic Planning & Project Delivery" },
+                            { name: "Hammed Ebiere", title: "Executive Director", focus: "Operations & Financial Oversight" },
+                            { name: "Hammed Oluwatomisin", title: "Director", focus: "Technical Engineering & Innovation" }
                         ].map((member, index) => (
-                            <div key={index} className="group relative">
-                                <div className="aspect-[3/4] relative bg-gray-100 rounded-3xl overflow-hidden mb-6 filter grayscale hover:grayscale-0 transition-all duration-500 shadow-lg border-b-8 border-transparent group-hover:border-brand-gold">
-                                    {/* Placeholder for portraits */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-300">
-                                        <Users className="w-24 h-24" />
-                                    </div>
+                            <Card key={index} variant="bordered" hoverable className="p-10 border-l-4 border-l-brand-gold">
+                                <h4 className="text-2xl font-display font-black text-brand-dark">{member.name}</h4>
+                                <p className="text-brand-blue font-bold uppercase tracking-widest text-[10px] mt-2">{member.title}</p>
+                                <div className="mt-6 pt-6 border-t border-gray-100">
+                                    <p className="text-gray-500 font-headings text-sm leading-relaxed">
+                                        Specializing in {member.focus.toLowerCase()}, ensuring every project meets the highest professional standards.
+                                    </p>
                                 </div>
-                                <h4 className="text-2xl font-display font-black text-brand-dark transition-colors group-hover:text-brand-gold">{member.name}</h4>
-                                <p className="text-brand-blue font-bold uppercase tracking-widest text-xs mt-1">{member.title}</p>
-                            </div>
+                            </Card>
                         ))}
                     </div>
                 </div>

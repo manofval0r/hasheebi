@@ -35,8 +35,8 @@ export default function ProjectsPage() {
                             <button
                                 key={cat}
                                 onClick={() => setFilter(cat)}
-                                className={`px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all duration-300 ${filter === cat
-                                    ? "bg-brand-gold text-white shadow-xl scale-110"
+                                className={`px-8 py-3 rounded-sm font-black uppercase tracking-widest text-[10px] transition-all duration-300 ${filter === cat
+                                    ? "bg-brand-gold text-brand-dark shadow-xl scale-105"
                                     : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                                     }`}
                             >
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
                                                 </div>
 
                                                 <div className="mt-8 overflow-hidden h-0 group-hover:h-12 transition-all duration-500">
-                                                    <div className="w-full py-3 bg-brand-gold text-brand-dark font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 rounded-lg">
+                                                    <div className="w-full py-3 bg-brand-gold text-brand-dark font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 rounded-sm shadow-xl">
                                                         View Details <Plus className="w-4 h-4" />
                                                     </div>
                                                 </div>

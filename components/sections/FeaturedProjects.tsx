@@ -66,7 +66,7 @@ export function FeaturedProjects() {
                         <SwiperSlide key={project.id}>
                             <motion.div
                                 whileHover={{ y: -10 }}
-                                className="group relative h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+                                className="group relative h-[500px] rounded-sm overflow-hidden professional-shadow"
                             >
                                 <Image
                                     src={project.image}
@@ -76,13 +76,13 @@ export function FeaturedProjects() {
                                 />
 
                                 {/* Overlays */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                                <div className="absolute inset-0 border-4 border-transparent group-hover:border-brand-gold/30 transition-all rounded-2xl m-4" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+                                <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-gold/20 transition-all rounded-sm m-4" />
 
                                 {/* Content */}
                                 <div className="absolute bottom-0 left-0 right-0 p-8 space-y-4">
                                     <div className="flex items-center gap-2">
-                                        <span className="px-3 py-1 bg-brand-gold text-brand-dark text-[10px] font-bold uppercase tracking-widest rounded-md">
+                                        <span className="px-3 py-1 bg-brand-gold text-brand-dark text-[10px] font-black uppercase tracking-widest rounded-sm">
                                             {project.category}
                                         </span>
                                     </div>
