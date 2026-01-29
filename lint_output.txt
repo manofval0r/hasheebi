@@ -1,0 +1,53 @@
+
+> hasheebi@0.1.0 lint
+> eslint
+
+
+C:\CD STF\hasheebi\app\about\page.tsx
+  31:88  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  73:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  75:75  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  85:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  87:56  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\CD STF\hasheebi\app\contact\page.tsx
+   6:44   warning  'MessageCircle' is defined but never used                        @typescript-eslint/no-unused-vars
+  10:10   warning  'motion' is defined but never used                               @typescript-eslint/no-unused-vars
+  49:130  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\CD STF\hasheebi\app\services\page.tsx
+  5:19  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\CD STF\hasheebi\components\layout\Header.tsx
+  53:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\CD STF\hasheebi\components\layout\Header.tsx:53:9
+  51 |
+  52 |     useEffect(() => {
+> 53 |         setIsOpen(false);
+     |         ^^^^^^^^^ Avoid calling setState() directly within an effect
+  54 |     }, [pathname]);
+  55 |
+  56 |     return (  react-hooks/set-state-in-effect
+
+C:\CD STF\hasheebi\components\sections\CTASection.tsx
+  33:53  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  34:59  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\CD STF\hasheebi\components\sections\Hero.tsx
+   34:49   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  118:37   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  118:121  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\CD STF\hasheebi\components\sections\WhyChooseUs.tsx
+  42:70  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  43:75  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+Γ£û 17 problems (14 errors, 3 warnings)
+
