@@ -20,6 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hashebi.com.ng"),
   title: {
     default: "HASHEBI GLOBAL SERVICES - Leading Construction Firm in Nigeria",
     template: "%s | HASHEBI GLOBAL SERVICES"

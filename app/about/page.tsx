@@ -107,8 +107,10 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             { name: "Hammed Shola", title: "Managing Director", focus: "Strategic Planning & Project Delivery" },
+                            { name: "Olalekan Liasu", title: "General Manager Projects", focus: "Project Oversight & Control" },
                             { name: "Hammed Ebiere", title: "Executive Director", focus: "Operations & Financial Oversight" },
-                            { name: "Hammed Oluwatomisin", title: "Director", focus: "Technical Engineering & Innovation" }
+                            { name: "Adeyanju Adegbite", title: "Project Manager", focus: "Project Management & Execution" },
+                            { name: "Mr. Okoro", title: "Auditor", focus: "Financial Oversight" }
                         ].map((member, index) => (
                             <Card key={index} variant="bordered" hoverable className="p-10 border-l-4 border-l-brand-gold">
                                 <h4 className="text-2xl font-display font-black text-brand-dark">{member.name}</h4>
