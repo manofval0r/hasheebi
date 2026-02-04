@@ -48,7 +48,7 @@ export function Hero() {
 
                     <p className="text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed font-headings font-medium">
                         Hashebi Global Services is a leading construction firm in Delta State,
-                        providing world-class engineering and building solutions for complex projects.
+                        providing world-class engineering, building, civil engineering and construction solutions for complex projects.
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
